@@ -1,14 +1,18 @@
+const { AuthenticationError } = require('apollo-server-express');
 const { Book, User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 // query requests
 const resolvers = {
   Query: {
+    // By adding context to our query, 
+    // we can retrieve the logged in user without specifically searching for them
     me: async (_parent, _args, context) => {
-      if(context.user) {
-        return User.findOne({_id: context.user.id})
+      if (context.user) {
+        return User.findOne({ _id: context.user.id })
       }
-    }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 
   Mutation: {
@@ -21,7 +25,7 @@ const resolvers = {
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw new AuthenticationError('Incorrect info!');
       }
       const token = signToken(user);
       return { token, user };
@@ -45,16 +49,18 @@ const resolvers = {
           { new: true }
         )
       }
+      throw new AuthenticationError('You need to be logged in!');
     },
 
     removeBook: async (_parent, { bookId }, context) => {
       if (context.user) {
         return User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedBooks: { bookId: bookId} } },
+          { $pull: { savedBooks: { bookId: bookId } } },
           { new: true }
         );
       }
+      throw new AuthenticationError('You need to be logged in!');
     },
   }
 };
