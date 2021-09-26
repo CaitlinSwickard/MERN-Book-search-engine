@@ -22,7 +22,7 @@ type User {
 
 type Auth {
   token: ID!
-  user: [User]
+  user: User
 }
 
 input bookInput {
