@@ -12,7 +12,7 @@ To complete the assignment, I did the following:
 
 4. Deploy the application to Heroku with a MongoDB database using MongoDB Atlas.
 
-[View deployed Heroku app here](https://desolate-taiga-28989.herokuapp.com/)
+[View deployed Heroku app here](https://sheltered-harbor-06128.herokuapp.com/)
 - [Installation](#install)
 - [Start application](#start-application)
 
