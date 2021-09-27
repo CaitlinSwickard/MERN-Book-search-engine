@@ -60,7 +60,6 @@ This application runs on http://localhost:3000/ open url to begin using Book Sea
 
 ## View
 
-
 ![Shot-1](./images/saved-books.jpeg)
 ![Shot-2](./images/search-books.jpeg)
 
