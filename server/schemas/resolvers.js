@@ -7,13 +7,18 @@ const resolvers = {
   Query: {
     // By adding context to our query, 
     // we can retrieve the logged in user without specifically searching for them
-    me: async (_parent, _args, context) => {
-      if (context.user) {
-        return User.findOne({ _id: context.user.id })
+    me: async(parent, args, context) => {
+      if(context.user) {
+          const userData = await User.findOne({_id: context.user._id})
+          .select('-_v -password')
+
+          return userData;
       }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-  },
+
+      throw new AuthenticationError('You are not logged in');
+  
+  }
+},
 
   Mutation: {
     loginUser: async (_parent, { email, password }) => {

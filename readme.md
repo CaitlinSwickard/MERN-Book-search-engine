@@ -12,6 +12,11 @@ To complete the assignment, I did the following:
 
 4. Deploy the application to Heroku with a MongoDB database using MongoDB Atlas.
 
+[View deployed Heroku app here](https://desolate-taiga-28989.herokuapp.com/)
+- [Installation](#install)
+- [Start application](#start-application)
+
+
 ## User Story
 
 ```md
@@ -23,7 +28,7 @@ SO THAT I can keep a list of books to purchase
 ## Install
 
 Clone project
-Run the following line of code in your terminal at the ROOT level to install all the needed packages(make sure you have [node.js](https://nodejs.org/en/download/) installed on our machine):
+Run the following line of code in your terminal at the ROOT level to install all the needed packages(make sure you have [node.js](https://nodejs.org/en/download/) installed on your machine):
 
 ```
 npm i
@@ -56,8 +61,8 @@ This application runs on http://localhost:3000/ open url to begin using Book Sea
 ## View
 
 
-![Shot-1]()
-![Shot-2]()
+![Shot-1](./images/saved-books.jpeg)
+![Shot-2](./images/search-books.jpeg)
 
 ### Credits
 Frontend starting files provided © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
