@@ -19,3 +19,46 @@ AS AN avid reader
 I WANT to search for new books to read
 SO THAT I can keep a list of books to purchase
 ```
+
+## Install
+
+Clone project
+Run the following line of code in your terminal at the ROOT level to install all the needed packages(make sure you have [node.js](https://nodejs.org/en/download/) installed on our machine):
+
+```
+npm i
+```
+
+## Start application
+
+Once all the packages have been installed, CD into the SERVER level of the file structure and run the following code in command line :
+
+```
+npm run develop
+```
+
+This application runs on http://localhost:3000/ open url to begin using Book Search app. A new user should create a login by signing up, then search, save and remove books from the profile as needed. 
+## Built With
+
+- HTML
+- CSS
+- Bootstrap
+- React
+- JavaScript
+- Node.js
+  - express
+  - mongoose
+  - bcrypt
+  - jsonwebtoken
+  - apollo-server-express
+  - graphql
+
+## View
+
+
+![Shot-1]()
+![Shot-2]()
+
+### Credits
+Frontend starting files provided © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
